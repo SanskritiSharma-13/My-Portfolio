@@ -1,9 +1,9 @@
-*{
-    font-family:system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+* {
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
     margin: 0;
 }
 
-html{
+html {
     scroll-behavior: smooth;
     scrollbar-width: none;
     animation: fadeInAnimation ease 1s;
@@ -12,125 +12,128 @@ html{
 body::-webkit-scrollbar {
     display: none;
     overflow-x: hidden;
-  }
+}
 
 body {
     -ms-overflow-style: none;  /* IE and Edge */
     scrollbar-width: none;  /* Firefox */
-  }
+}
 
 @keyframes fadeInAnimation {
     0% {
         opacity: 0;
-        transform: translate(0px,3em);
+        transform: translate(0px, 3em);
     }
     100% {
         opacity: 1;
-        transform: translate(0px,0px);
-     }
+        transform: translate(0px, 0px);
+    }
 }
 
-.content{
+.content {
     display: flex;
     flex-direction: column;
-    margin-left: 15%;
-    margin-right: 35%;
+    margin-left: 10%;
+    margin-right: 10%;
+    padding-top: 3em;  /* Add padding to the top of the content */
 }
 
-section{
+section {
     height: 100vh;
     display: flex;
     flex-direction: column;
-    justify-content:center;
-    align-items:flex-start;
+    justify-content: center;
+    align-items: flex-start;
+    padding-top: 2em;  /* Add padding to the top of each section */
 }
 
-section h3{
+section h3 {
     padding-bottom: 0.5em;
 }
 
-img{
+img {
     pointer-events: none;
 }
 
-.picture{
-    height: 30vw;
+.picture {
+    height: 20vw;
+    margin-bottom: 1em;  /* Add margin to the bottom of the picture */
 }
 
-nav{
+nav {
     position: fixed;
-    right: 15%;
-    top: 20em;
-    font-weight: 500;
+    top: 0;
+    width: 100%;
+    background-color: #333;  /* Dark Gray */
+    z-index: 1000;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+nav ul {
+    display: flex;
+    justify-content: center;
+    padding: 1em 0;
+    margin: 0;
+    list-style: none;
 }
 
 nav ul li {
-    padding: 0.2em;
-    font-size: 2.5em;
-    text-align: right;
+    padding: 0.2em 1em;
+    font-size: 1.5em;
 }
 
-h1{
+h1 {
     font-size: 4em;
 }
 
-h2{
+h2 {
     font-size: 3em;
     font-weight: lighter;
 }
 
-h3{
+h3 {
     font-size: 3em;
 }
 
-h4{
+h4 {
     font-size: 2.5em;
 }
 
-h5{
+h5 {
     font-size: 1.8em;
     margin-bottom: 0.2em;
 }
 
-h6{
+h6 {
     font-size: 1.3em;
     margin-bottom: 0.2em;
 }
 
-p{
+p {
     font-size: 1.5em;
-    word-break:normal;
+    word-break: normal;
     margin-bottom: 3%;
 }
 
-li{
+li {
     list-style: none;
 }
 
-
-a{
-    color: black;
+a {
+    color: white;  /* Change link color to white */
     text-decoration: none;
-    -webkit-transition: color .5s ease;
-    -moz-transition: color .5s ease;
-    -ms-transition: color .5s ease;
-    -o-transition: color .5s ease;
-    transition: color .2s ease;
+    -webkit-transition: color 0.5s ease;
+    -moz-transition: color 0.5s ease;
+    -ms-transition: color 0.5s ease;
+    -o-transition: color 0.5s ease;
+    transition: color 0.2s ease;
 }
 
-a:hover{
+a:hover {
     color: #B49C68;
 }
 
-section li{
-    font-size: 2.5em;
-}
-
-section li a{
-        font-size: 2em;
-}
-
-.card{
+.card {
     border-style: solid;
     border-width: 1px;
     border-radius: 2vw;
@@ -142,196 +145,195 @@ section li a{
     padding: 1vw 2vw 1vw 4vw;
     box-shadow: 10px 10px;
     background-color: white;
-    
 }
 
-.card .wide{
+.card .wide {
     height: 4vw;
     width: fit-content;
     overflow: hidden;
-    object-fit:fill;
+    object-fit: fill;
 }
 
-.card p{
+.card p {
     font-size: 1vw;
 }
 
-footer{
+footer {
     text-align: center;
     margin: 1em;
     font-weight: 600;
 }
 
-.exp{
-    display: flexbox;
+.exp {
+    display: flex;
     flex-direction: row;
     align-items: flex-start;
     justify-content: center;
     padding: 1em;
 }
 
-.exp-icon{
-    height:6em;
+.exp-icon {
+    height: 6em;
     margin: 0 0.75em;
 }
 
 @media screen and (max-width: 1300px) {
-    
-    .picture{
+    .picture {
         height: 40vw;
     }
 
     nav ul li {
-        font-size: 2em;
-    }
-
-    h1{
-        font-size: 3em;
-    }
-    
-    h2{
-        font-size: 2.3em;
-        font-weight: lighter;
-    }
-    
-    h3{
-        font-size: 2em;
-    }
-    
-    h4{
-        font-size: 1.7em;
-    }
-    
-    h5{
-        font-size: 1.5em;
-    }
-
-    h6{
-        font-size: 1.2em;
-    }
-    
-    p{
         font-size: 1.3em;
     }
 
-    section li{
-        font-size: 2em;
-        margin: 0.5em;
-    }
-    
-    section li a{
-            font-size: 2em;
+    h1 {
+        font-size: 3em;
     }
 
-    .card{
+    h2 {
+        font-size: 2.3em;
+        font-weight: lighter;
+    }
+
+    h3 {
+        font-size: 2em;
+    }
+
+    h4 {
+        font-size: 1.7em;
+    }
+
+    h5 {
+        font-size: 1.5em;
+    }
+
+    h6 {
+        font-size: 1.2em;
+    }
+
+    p {
+        font-size: 1.3em;
+    }
+
+    section li {
+        font-size: 1.5em;
+        margin: 0.5em;
+    }
+
+    .card {
         margin: 2vw;
         min-width: 40vw;
     }
 
-    .card p{
+    .card p {
         font-size: 1.3vw;
     }
+}
 
-    @media screen and (max-width: 950px) {
+@media screen and (max-width: 950px) {
+    body {
+        width: 100vw;
+        max-width: 100%;
+    }
+
+    .content {
+        margin-left: 5%;
+        margin-right: 5%;
+    }
+
+    section {
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: start;
+        align-items: baseline;
+        padding-top: 3em;
+        margin-top: 2em;
+    }
+
+    #home {
+        justify-content: flex-start;
+        align-items: center;
+        text-align: center;
+    }
+
+    #contacts {
+        margin-bottom: 6em;
+    }
     
-        body{
-            width: 100vw;
-            max-width: 100%;
-        }
-
-        nav{
-            font-size: 0;
-        }
-
-        .content{
-            margin-left: 10%;
-            margin-right: 10%;
-        }
-
-        section{
-            height: 100%;
-            display: flex;
-            flex-direction: column;
-            justify-content:start;
-            align-items:baseline;
-            padding-top: 3em;
-            margin-top: 2em;
-        }
-
-        #home{
-            justify-content: flex-start;
-            align-items: center;
-            text-align: center;
-        }
-
-        #contact{
-            margin-bottom: 6em;
-        }
-
-        .picture{
-            height: 60vw;
-        }
-
-        nav ul li {
-            font-size: 1.1em;
-        }
-
-        h1{
-            font-size: 7vw;
-        }
-        
-        h2{
-            font-size: 5vw;
-            font-weight: lighter;
-        }
-        
-        h3{
-            font-size: 1.5em;
-        }
-        
-        h4{
-            font-size: 1.2em;
-        }
-        
-        h5{
-            font-size: 1.2em;
-        }
-
-        h6{
-            font-size: .9em;
-        }
-        
-        p{
-            font-size: 1em;
-        }
     
-        section li{
-            font-size: 1.3em; 
-        }
-        
-        section li a{
-                font-size: 2em;
-                margin: 0.7em 0;
-            }
-
-        .card{
-            margin: 3vw;
-            width: 65vw;
-            display: flex;
-            flex-direction: column;
-            justify-content: baseline;
-        }
     
 
-        .card .wide{
-            width: auto;
-            height: auto;
-            overflow:hidden;
-            object-fit:cover;
-        }
+    .picture {
+        height: 60vw;
+    }
 
-        .card p{
-            font-size: 0.8em;
-        }
+    nav ul li {
+        font-size: 1.1em;
+    }
+
+    h1 {
+        font-size: 7vw;
+    }
+
+    h2 {
+        font-size: 5vw;
+        font-weight: lighter;
+    }
+
+    h3 {
+        font-size: 1.5em;
+    }
+
+    h4 {
+        font-size: 1.2em;
+    }
+
+    h5 {
+        font-size: 1.2em;
+    }
+
+    h6 {
+        font-size: 0.9em;
+    }
+
+    p {
+        font-size: 1em;
+    }
+
+    section li {
+        font-size: 1.3em;
+    }
+
+    section li a {
+        font-size: 2em;
+        margin: 0.7em 0;
+    }
+
+    .card {
+        margin: 3vw;
+        width: 65vw;
+        display: flex;
+        flex-direction: column;
+        justify-content: baseline;
+    }
+
+    .card .wide {
+        width: auto;
+        height: auto;
+        overflow: hidden;
+        object-fit: cover;
+    }
+
+    .card p {
+        font-size: 0.8em;
     }
 }
+.card-link {
+    display: block;
+    text-decoration: none;
+    color: inherit;
+}
+
+
+
